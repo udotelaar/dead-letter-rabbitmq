@@ -1,0 +1,7 @@
+{
+    "require": {
+        "silex/silex": "1.2.x-dev",
+        "knplabs/console-service-provider": "dev-master",
+        "fiunchinho/rabbitmq-service-provider": "1.0.0"
+    }
+}
