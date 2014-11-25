@@ -18,7 +18,7 @@ $app->register(new \fiunchinho\Silex\Provider\RabbitServiceProvider(), array(
         'MessageProcessor' => [
             'connection'        => 'default',
             'exchange_options'  => ['name' => 'MessageProcessor', 'type' => 'direct'],
-            'queue_options'     => ['name' => 'MessageProcessor_Delay', 'arguments' =>  ['x-message-ttl' => ['I', '10000'], 'x-dead-letter-exchange' => ['S', 'amq.direct'], 'x-dead-letter-routing-key' => ['S', 'MessageProcessor']]],
+            'queue_options'     => ['name' => 'MessageProcessor_Delay', 'arguments' =>  ['x-message-ttl' => ['I', '10000'], 'x-dead-letter-exchange' => ['S', 'MessageProcessor'], 'x-dead-letter-routing-key' => ['S', 'MessageProcessor']]],
         ],
     ],
     'rabbit.consumers' => [
